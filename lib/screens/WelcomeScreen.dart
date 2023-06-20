@@ -1,3 +1,4 @@
+import 'package:doctor/screens/SignUpScreen.dart';
 import 'package:doctor/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -89,9 +90,9 @@ class WelcomeScreen extends StatelessWidget {
                     borderRadius: BorderRadius.circular(30),
                     child: InkWell(
                       onTap: (){
-                          //nevigator.push(context, MaterialPageRoute(
-                          //builder: (context) =>
-                          //));
+                          Navigator.push(context, MaterialPageRoute(
+                          builder: (context) => SignUpScreen(),
+                          ));
                       },
 
                       child: Padding(

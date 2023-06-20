@@ -1,16 +1,16 @@
-import 'package:doctor/screens/SignUpScreen.dart';
+import 'package:doctor/screens/login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
-  bool passToggle = true;
+class _SignUpScreenState extends State<SignUpScreen> {
+   bool passToggle = true;
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -19,19 +19,17 @@ class _LoginScreenState extends State<LoginScreen> {
         child: SafeArea(
           child: Column(
             children: [
-              SizedBox(height: 10,),
+              //SizedBox(height: 10,),
               Padding(
-                padding: EdgeInsets.only(left: 10, right: 10,),
+                padding: EdgeInsets.only(left: 30, right: 30,),
                 child: Image.asset("images/reception.gif"),
               ),
-             // SizedBox(height: 10,),
-
               Padding(
                 padding: EdgeInsets.all(8),
                 child: TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      label: Text("Enter Username",
+                      label: Text("Fullname",
               style: TextStyle(
                 color: Color(0xFF008080),
                   fontSize: 18,
@@ -43,7 +41,40 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                 ),
               ),
-             
+              Padding(
+                padding: EdgeInsets.all(8),
+                child: TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      label: Text("Email",
+              style: TextStyle(
+                color: Color(0xFF008080),
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1,
+                  
+              )),
+                      prefixIcon: Icon(Icons.email),
+                    ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(8),
+                child: TextField(
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(),
+                      label: Text("Phone Number",
+              style: TextStyle(
+                color: Color(0xFF008080),
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1,
+                  
+              )),
+                      prefixIcon: Icon(Icons.phone),
+                    ),
+                ),
+              ),
                Padding(
                 padding: EdgeInsets.all(8),
                 child: TextField(
@@ -76,7 +107,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                 ),
               ),
-              SizedBox(height: 20,),
+              SizedBox(height: 10,),
+
               Padding(
                 padding: const EdgeInsets.all(10),
                  child: FractionallySizedBox(
@@ -88,14 +120,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       onTap: (){
                           Navigator.push(context, 
                           MaterialPageRoute(
-                          builder: (context) => LoginScreen(),
+                          builder: (context) => SignUpScreen(),
                           ));
                       },
 
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical:15, horizontal:25 ),
+                        padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10 ),
                         child: Center(
-                          child: Text('Log In',
+                          child: Text('Sign Up',
                           style: TextStyle(
                             fontSize: 22,
                             fontWeight: FontWeight.bold,
@@ -109,11 +141,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              SizedBox(height: 10,),
+            
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Don't have any account?",
+                Text("Already have any account?",
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.normal,
@@ -124,25 +156,25 @@ class _LoginScreenState extends State<LoginScreen> {
                   TextButton(onPressed: () {
                      Navigator.push(context, 
                           MaterialPageRoute(
-                          builder: (context) => SignUpScreen(),
+                          builder: (context) => LoginScreen(),
                           ));
                   },
-                    child: Text("Sign Up",
+                    child: Text("Log In",
                     style: 
-                    TextStyle(
+                  TextStyle(
                       fontSize: 18,
                      color: Color(0xFFE4572E),
                     ),),
-                  ),
+                  )
                 ],
-              ),
+              )
         
 
-
             ],
-          )
+    ),
         ),
-      )
+      ),
     );
+
   }
 }
