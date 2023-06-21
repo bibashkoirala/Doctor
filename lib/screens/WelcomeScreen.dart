@@ -1,5 +1,6 @@
 import 'package:doctor/screens/SignUpScreen.dart';
 import 'package:doctor/screens/login_screen.dart';
+import 'package:doctor/widgets/navbar_roots.dart';
 import 'package:flutter/material.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -18,9 +19,9 @@ class WelcomeScreen extends StatelessWidget {
             Align(alignment: Alignment.centerRight,
             child: TextButton(
               onPressed: (){
-                // Navigator.push(context,MaterialPageRoute(
+                Navigator.push(context,MaterialPageRoute(
                   
-                //   builder: (context) => ));
+                  builder: (context) => NavBarRoots() ,));
               },
               child: Text('SKIP',
                 style: TextStyle(
@@ -51,7 +52,7 @@ class WelcomeScreen extends StatelessWidget {
 
               Text('Appoint Your Doctor',
               style: TextStyle(
-                color: Color(0xFFE4572E),
+                color: Colors.pink,
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                   letterSpacing: 1,
