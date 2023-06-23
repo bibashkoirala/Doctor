@@ -1,4 +1,5 @@
 import 'package:doctor/screens/homescreen.dart';
+import 'package:doctor/screens/settings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
@@ -21,7 +22,7 @@ class _NavBarRootsState extends State<NavBarRoots> {
      //Schedule screen
      Container(),
      //Settings Screen
-     Container(),
+     SettingsScreen(),
   ];
   @override
   Widget build(BuildContext context) {

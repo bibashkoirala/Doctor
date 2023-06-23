@@ -1,4 +1,5 @@
 import 'package:doctor/screens/SignUpScreen.dart';
+import 'package:doctor/screens/homescreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -21,7 +22,7 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               SizedBox(height: 10,),
               Padding(
-                padding: EdgeInsets.only(left: 10, right: 10,),
+                padding: EdgeInsets.only(left: 70, right: 70,),
                 child: Image.asset("images/reception.gif"),
               ),
              // SizedBox(height: 10,),
@@ -88,7 +89,9 @@ class _LoginScreenState extends State<LoginScreen> {
                       onTap: (){
                           Navigator.push(context, 
                           MaterialPageRoute(
-                          builder: (context) => LoginScreen(),
+                          builder: (context) => SingleChildScrollView(
+                            child: HomeScreen(),
+                          ),
                           ));
                       },
 

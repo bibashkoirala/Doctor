@@ -21,7 +21,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
             children: [
               //SizedBox(height: 10,),
               Padding(
-                padding: EdgeInsets.only(left: 30, right: 30,),
+                padding: EdgeInsets.only(left: 70, right: 70,),
                 child: Image.asset("images/reception.gif"),
               ),
               Padding(
