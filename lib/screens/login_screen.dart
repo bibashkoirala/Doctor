@@ -19,6 +19,7 @@ class _LoginScreenState extends State<LoginScreen> {
       child: SingleChildScrollView(
         child: SafeArea(
           child: Column(
+          
             children: [
               SizedBox(height: 10,),
               Padding(
